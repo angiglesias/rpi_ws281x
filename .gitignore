@@ -1,3 +1,6 @@
+*
+!*.*
+!/*
 .sconsign.dblite
 version.h
 *.pyc
@@ -6,3 +9,7 @@ newtest
 *.o
 *.a
 *.swp
+*.os
+*.so
+build/
+.vscode/
