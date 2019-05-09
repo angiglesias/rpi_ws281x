@@ -25,7 +25,8 @@ deb_crossbuild: shared
 	$(HIDE)$(INSTALL) -m0644 ws2811.h rpihw.h pwm.h build/libws2811-cross_$(VERSION)/usr/$(PREFIX)/include
 
 	$(HIDE)$(INSTALL) -d -m0755 build/libws2811-cross_$(VERSION)/usr/lib/$(PREFIX)
-	$(HIDE)$(INSTALL) -m0755 build/libws2811.so  build/libws2811-cross_$(VERSION)/usr/lib/$(PREFIX)
+	$(HIDE)$(INSTALL) -m0644 build/libws2811.so  build/libws2811-cross_$(VERSION)/usr/lib/$(PREFIX)
+	$(HIDE)$(INSTALL) -m0644 build/libws2811.a  build/libws2811-cross_$(VERSION)/usr/lib/$(PREFIX)
 	$(HIDE)$(INSTALL) -d -m0755 build/libws2811-cross_$(VERSION)/usr/lib/$(PREFIX)/pkgconfig
 	sed -i 's/libws2811/libws2811-dev/g' build/libws2811-cross_$(VERSION)/DEBIAN/control
 	
